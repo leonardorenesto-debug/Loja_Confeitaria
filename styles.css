@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #6b3e26;
+    --success: #c96b2c;
+    --danger: #e74c3c;
+    --bg: #f8eee7;
+    --border: #ddd;
+    --text-muted: #555;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: #222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 16px;
+    flex: 1;
+}
+
+.header {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 24px 16px;
+    margin: -16px -16px 20px;
+    font-size: 22px;
+}
+
+.install-btn {
+    margin-top: 10px;
+    background: white;
+    color: var(--primary);
+    width: auto;
+    padding: 8px 14px;
+}
+
+.section {
+    background: white;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    font-size: 16px;
+    color: var(--primary);
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+}
+
+/* Formulário */
+
+.form-section {
+    display: none;
+}
+
+.form-section.visible {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.form-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+/* Botões */
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    flex: 1;
+}
+
+.btn:active {
+    opacity: 0.8;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-secondary {
+    background: #eee;
+    color: #333;
+}
+
+.btn-success {
+    background: var(--success);
+    color: white;
+    width: 100%;
+    font-size: 17px;
+    padding: 14px;
+}
+
+.btn-delete {
+    background: var(--danger);
+    color: white;
+    font-size: 13px;
+    padding: 8px;
+}
+
+.btn-cart {
+    background: var(--success);
+    color: white;
+    font-size: 13px;
+    padding: 8px;
+}
+
+/* Lista de Brigadeiros */
+
+.brigadeiro-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.brigadeiro-item {
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 12px;
+    background: #fffaf7;
+}
+
+.brigadeiro-imagem {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.brigadeiro-item strong {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--primary);
+    font-size: 17px;
+}
+
+.brigadeiro-item p {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+.brigadeiro-actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* Carrinho */
+
+.carrinho-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.carrinho-item {
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 12px;
+    background: #fffaf7;
+}
+
+.carrinho-item strong {
+    display: block;
+    color: var(--primary);
+    margin-bottom: 4px;
+}
+
+.carrinho-item p {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.carrinho-total {
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    font-size: 18px;
+    color: var(--primary);
+}
+
+.empty-message {
+    text-align: center;
+    color: #999;
+    padding: 24px;
+}
+
+/* Toast */
+
+.toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    z-index: 999;
+    pointer-events: none;
+}
+
+/* Footer */
+
+.footer {
+    text-align: center;
+    padding: 12px;
+    background: var(--primary);
+    color: white;
+    font-size: 12px;
+}
+
+/* Celular */
+
+@media (max-width: 480px) {
+
+    .form-actions,
+    .brigadeiro-actions {
+        flex-direction: column;
+    }
+
+}
